@@ -5,7 +5,7 @@ import java.util.*;
 
 public class CurrencyHolder
 {
-	private static final Map<String,Currency> currencies = new HashMap<String, Currency>();
+	private static final Map<String, Currency> currencies = new HashMap<String, Currency>();
 
 	static
 	{

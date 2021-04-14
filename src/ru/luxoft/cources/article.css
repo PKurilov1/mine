@@ -1,0 +1,258 @@
+/***************************************************************************************************
+ *
+ *		Styles for the dynamically loaded article
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather:700,700italic,300,300italic);
+
+body {
+	margin:						0;
+	border:						0px none;
+	background-color:			#FAFAFA;
+	color:						#000000;
+	font:						normal 11px/15px Merriweather, tahoma, verdana, lucida, sans-serif;
+	cursor:						default;
+	width:						512px;
+	width:						40em;
+	padding:					10px;
+	line-height:				160%;
+	width: 45em;
+	margin-left: 25em;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	}
+
+.unredacted {
+	color:						inherit;
+	background-color:			#FF8080;
+	}
+
+img	{
+	border:						0px none;
+	}
+
+h1 {
+	font:						bold 13px/16px Merriweather, tahoma, verdana, lucida, sans-serif;
+	}
+
+h2 {
+	font:						bold 12px/16px Merriweather, tahoma, verdana, lucida, sans-serif;
+	}
+
+h3 {
+	font:						bold 11px/16px Merriweather, tahoma, verdana, lucida, sans-serif;
+	}
+
+h4 {
+	font:						bold 10px/16px Merriweather, tahoma, verdana, lucida, sans-serif;
+	}
+/*
+table {
+	border:				0px;
+	border-style:				solid;
+	border-spacing:				0px;
+	padding:					2px;
+	}
+*/
+td,
+th {
+	font:						normal 11px/15px Merriweather, tahoma, verdana, lucida, sans-serif;
+	border-width:				1px;
+	border-style:				solid;
+	border-spacing:				0px;
+	padding:					2px;
+	}
+
+th {
+	text-align:					center;
+	}
+
+td.term {
+	vertical-align:				top;
+	font-weight:				bold;
+	padding-bottom:				20px;
+	}
+
+td.description {
+	vertical-align:				top;
+	padding-left:				20px;
+	padding-bottom:				20px;
+	}
+
+li {
+	margin-top:					6px;
+	}
+
+.text p {
+	text-align:					justify;
+	margin:						6px 5px 5px 5px;
+	}
+
+.text img {
+	border:						1px solid #808080;
+	margin:						15px;
+	}
+
+.text img.left {
+	float:						left;
+	margin-left:				5px;
+	}
+
+.text img.right {
+	float:						right;
+	margin-right:				5px;
+	}
+
+.box-header {
+	height:						16px;
+	margin-top:					20px;
+	padding:					4px 4px 7px 4px;
+	color:						inherit;
+	background:					#D1E1EC url('../graphics/tlc_blue_white.gif') no-repeat top left;	
+	}
+
+.box-header .text {
+	float:						left;
+	color:						#2E3C45;
+	background-color:			inherit;
+	font:						bold 11px/12px Merriweather, tahoma, verdana, lucida, sans-serif;
+	text-align:					left;
+	margin:						2px 0 0 5px;
+	letter-spacing:				0.5px;
+	}
+
+.box {
+	margin:						12px;
+	padding:					8px;
+	text-align:					left;
+	}
+
+/* https://gist.github.com/unruthless/413930 */
+
+sub, sup {
+  /* Specified in % so that the sup/sup is the
+     right size relative to the surrounding text */
+  font-size: 75%;
+
+  /* Zero out the line-height so that it doesn't
+     interfere with the positioning that follows */
+  line-height: 0;
+
+  /* Where the magic happens: makes all browsers position
+     the sup/sup properly, relative to the surrounding text */
+  position: relative;
+
+  /* Note that if you're using Eric Meyer's reset.css, this
+     is already set and you can remove this rule */
+  vertical-align: baseline;
+}
+
+sup {
+  /* Move the superscripted text up */
+  top: -0.5em;
+}
+
+sub {
+  /* Move the subscripted text down, but only
+     half as far down as the superscript moved up */
+  bottom: -0.25em;
+}
+
+/*p{font-size:16px;font-size:1rem;line-height:30px;line-height:1.875rem;margin:0 0 20px 0;}*/
+
+/***************************************************************************************************
+ *
+ *
+ *
+ */
+
+pre {
+	color:						#006060;
+	font-family:				"Courier New", Courier, monospace;
+/*	font-size:					80%;*/
+/*	font-size:					90%;*/
+/*	margin-left:				1em;*/
+	}
+
+pre.syntax-rule {
+/*	background-color:			#C0C0C0;*/
+/*	background-color:			#E0E0E0;*/
+	background-color:			#F0F0F0;
+/*	color:						inherit;*/
+	padding-left:				1em;
+	border-top:					1px solid #808080;
+	border-right:				1px solid #808080;
+	border-bottom:				1px solid #808080;
+	border-left:				1px solid #808080;
+	padding-top:				1em;
+	padding-bottom:				1em;
+	}
+
+pre i,
+pre var
+	{
+	color:						#C06000;
+	}
+
+pre.syntax-rule b 
+	{
+	color:						darkblue;
+	}
+
+pre.syntax-rule small 
+	{
+	color:						black;
+	}
+
+/***************************************************************************************************
+ *
+ *		Boxed table styles
+ *
+ */
+
+table.boxed {
+	border-spacing:				2px;
+	empty-cells:				hide;
+	}
+
+table.boxed td,
+table.boxed th,
+table.boxed th.header
+	{
+	background-color:			#FFFFFF;
+/*	border-color:				#000000;*/
+	border-color:				#808080;
+	border-style:				solid;
+	border-width:				1px;
+	color:						#000000;
+	padding:					2px;
+	padding-left:				8px;
+	padding-right:				8px;
+	text-align:					left;
+	vertical-align:				top;
+	}
+
+table.boxed th {
+	white-space:				nowrap;
+	background-color:			#C0C0C0;
+	color:						inherit;
+	}
+
+table.boxed th.header {
+	border-color:				#000000;
+	background-color:			#808080;
+	color:						#FFFFFF;
+	}
+
+table.boxed th.spacer {
+	border-style:				none;
+	background-color:			transparent;
+	height:						2em;
+	}
+
+/***************************************************************************************************
+ *
+ *	end
+ *
+ */

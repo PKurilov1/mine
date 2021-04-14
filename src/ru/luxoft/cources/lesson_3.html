@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<link href="./article.css" rel="stylesheet" type="text/css" />
+<title>Luxoft Training: Lesson 3</title>
+
+<style type="text/css">
+
+body {
+	width: 50em;
+	color: #444;
+	font: 12px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+h1 {
+	font: bold 140% "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.4;
+	margin: 2em 0 2em -4em;
+	padding: 1em;
+	border: 1px solid lightgray;
+	background-color: #e7ebef;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	}
+h1>div {
+	width: 3em;
+	float: left;
+	}
+h2 {
+	font: bold 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.4;
+	margin: 2em 0 2em -4em;
+	}
+h2>span {
+	float: left;
+	width: 4em;
+	}
+
+a:visited {
+	opacity: 0.8;
+	}
+a {
+	text-decoration-line: underline;
+	text-decoration-color: #b85b5a;
+	text-decoration-style: solid;
+	text-decoration-thickness: 1px;
+	color: black;
+	}
+pre {
+	font-family: consolas, monaco, "courier new", courier, monospace;
+/*  font-size: 1em;*/
+	font-size: 85%;
+	padding: 1em 2em;
+	background: #e7ebef;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	overflow: auto;
+	margin-bottom: 2em;
+/*  line-height: 24px;*/
+	line-height: 150%;
+	}
+
+/* Table of Contents */
+.toc p { font-weight: bold; }
+.toc span._0 { float: left; margin-left: 0em; width: 2em; }
+.toc span._1 { float: left; margin-left: 2em; width: 3em; }
+.toc span._2 { float: left; margin-left: 5em; width: 3em; }
+.toc a:after { content: "\a"; white-space: pre; }
+.toc a._4 { margin-left: 5em; }
+
+/* 1.3.3 db_VISTA Network Model Implementation */
+.orderings {
+	width: 100%;
+	border-collapse: collapse;
+	border-style: none;
+	margin-left: 2em;
+	}
+.orderings td {
+	padding: .5em;
+	vertical-align: top;
+	border-style: none;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+.orderings tr>:nth-child(1) {
+	font-weight: bold;
+	}
+
+/* Status Code Descriptions */
+.scd {
+	width: 100%;
+	border-collapse: collapse;
+	border-style: none;
+	}
+.scd td {
+	padding: .5em;
+	vertical-align: top;
+	border: 1px solid lightgray;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+.scd tr>:nth-child(1) {
+	font-weight: bold;
+	width: 8em;
+	}
+.scd tr>:nth-child(2) {
+	width: 4em;
+	text-align: center;
+	}
+.scd .red {
+	color: red;
+	}
+#_striked,
+#_S_BADTYPE,
+#_S_NOTMEM,
+#_S_NOFILE,
+#_S_KEYERR {
+	text-decoration-line: line-through;
+	text-decoration-color: red;
+	}
+
+/* Terminology */
+.termino dt {
+	margin-top: 1em;
+	font-weight: bold;
+	}
+.termino dd {
+	}
+.num {
+	position: absolute;
+	left: 29em;
+/*	float: left;*/
+	width: 5em;
+	color: gray;
+	text-align: right;
+/*	margin: 1em;*/
+/*	margin-left: -15em;*/
+/*	padding-top: 1em;*/
+	font-size: 70%;
+/*	visibility: hidden;*/
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 style="padding: 5em; text-align: center;">Упражнение 3<br>Приложение «Калькулятор»</h1>
+
+
+<h1>Цели упражнения</h1>
+
+<p>Ознакомиться с базовым синтаксисом языка Java. Научиться составлять простейшие программы в процедурном стиле на Java. Научиться планировать и осуществлять рефакторинг приложения.</p>
+
+​<h1>Описание</h1>
+
+<p>Среда разработки IntelliJ&nbsp;IDEA предоставляет весь необходимый функционал для разработки, отладки и запуска простейших Java приложений.</p>
+
+<p>Необходимо освоить этот функционал путём создания простейшего приложения консольного калькулятора. Реализуемые функции: сложение, вычитание, умножение, деление, факториал. Сценарий работы: пользователь вводит с консоли 2 числа и знак действия над ними (знак факториала принимаем за "!"), программа выводит результат действия над обоими числами. Действия повторяются до тех пор, пока пользователь не введет символ "q" (в этом случае программа завершает свою работу).</p>
+
+​<h1>Задачи упражнения</h1>
+
+<p><div class="num">1</div>Разобраться с техническим заданием в описании и определить нужные функциональные элементы в Java для его реализации.</p>
+<p><div class="num">2</div>Написать функции вычисления простейшего калькулятора.</p>
+<p><div class="num">3</div>Реализовать диалог программы с пользователем через консоль.</p>
+<p><div class="num">4</div>Добавить реакцию на ошибочные действия пользователя путём перехвата исключений.</p>
+
+​<h1>Подробное руководство</h1>
+
+<h2><span>1</span>Обеспечение пользовательского ввода</h2>
+
+<p><div class="num">1</div>Откройте проект lab-3-core;</p>
+<p><div class="num">2</div>Создайте новый класс Main.java. Создайте в нём функцию <pre>public static void main(String[] args)<br>{<br>}</pre></p>
+<p><div class="num">3</div>Создайте объект типа Scanner для общения с пользователем: <pre>Scanner scanner = new Scanner(System.in);</pre></p>
+<p><div class="num">4</div>Создайте переменную для хранения пользовательского ввода и проинициализируйте её пустым значением. <pre>String userInput = "";</pre></p>
+
+
+
+
+<p><div class="num">5</div>Создайте цикл для обеспечения ввода до тех пор, пока пользователь не введёт символ выхода. <pre>while (!"q".equals(userInput))<br>{<br>}</pre></p>
+
+<p><div class="num">6</div>Внутри только что созданного цикла while создайте 2 переменные чисел и введите в них значение с консоли
+<pre>int firstNumber = scanner.nextInt();<br>int secondNumber = scanner.nextInt();</pre></p>
+<p><div class="num">7</div>Внутри цикла while далее введите символ команды<pre>userInput = scanner.nextLine();</pre></p>
+<p><div class="num">8</div>Создайте переменную для результата операции<pre>double result;</pre></p>
+<p><div class="num">9</div>Внутри цикла далее создайте оператор переключения в зависимости от типа команды
+<pre>switch (userInput)
+{
+	case "+":
+		break;
+	case "-":
+		break;
+	case "*":
+		break;
+	case "/":
+		break;
+	case "!":
+		break;
+	default:
+		break;
+}</pre></p>
+<p><div class="num">10</div>Выведите переменную результата на экран<pre>System.out.println(result);</pre></p>
+
+<h2><span>2</span>Создание логики вычислений</h2>
+<p><div class="num">11</div>После функции main создайте отдельные функции для арифметических операций<pre>
+private static int plus(int numberOne, int numberTwo)
+{
+	return numberOne + numberTwo;
+}
+
+private static int minus(int numberOne, int numberTwo)
+{
+	return numberOne - numberTwo;
+}
+
+private static int multiply(int numberOne, int numberTwo)
+{
+	return numberOne * numberTwo;
+}
+
+private static int divide(int numberOne, int numberTwo)
+{
+	return numberOne / numberTwo;
+}</pre></p>
+<p><div class="num">12</div>После созданных выше функций создайте отдельную функцию для факториала<pre>
+private static int factorial(int numberOne)
+{
+	int result = 1;
+
+	for (int i = 1; i < numberOne; i++)
+	{
+		result *= i;
+	}
+
+	return result;
+}</pre></p>
+
+
+
+
+
+<p><div class="num">13</div>Используйте только что созданные функции арифметических операции в ранее созданном операторе переключения<pre>
+switch (userInput)
+{
+	case "+":
+		result = plus(firstNumber, secondNumber);
+		break;
+	case "-":
+		result = minus(firstNumber, secondNumber);
+		break;
+	case "*":
+		result = multiply(firstNumber, secondNumber);
+		break;
+	case "/":
+		result = divide(firstNumber, secondNumber);
+		break;
+	case "!":
+		result = factorial(firstNumber);
+		break;
+	default:
+		result = 0;
+		break;
+}</pre></p>
+
+<p><div class="num">14</div>Добавьте проверку значения введённого пользователем числа на ноль<pre>
+case "/":
+	if (secondNumber == 0)
+	{
+		continue;
+	}
+	result = divide(firstNumber, secondNumber);
+	break;</pre></p>
+
+<h2><span>3</span>Обработка исключений</h2>
+<p><div class="num">15</div>Оберните весь блок начиная с ввода чисел пользователем и заканчивая выводом результата в обработку исключений
+<pre>try
+{
+	int firstNumber = scanner.nextInt();
+	int secondNumber = scanner.nextInt();
+		……
+	System.out.println(result);
+} 
+catch (InputMismatchException ex)<br>{<br>}</pre></p>
+<p><div class="num">16</div>Добавьте реакцию на исключение в виде повтора функции вычисления
+<pre>catch (InputMismatchException ex)<br>{
+	System.out.println("Wrong input data!");
+	continue;
+}</pre></p>
+<h2><span>4</span>Расстановка текстовых сообщений</h2>
+<p><div class="num">17</div>Расставьте указания для пользователя программы там, где считаете нужным, например<pre>System.out.println("Enter numbers!");</pre></p>
+<p><div class="num">18</div>Насколько они полезны для пользователя? Есть ли вероятность "потеряться" в программе?
+
+
+
+
+
+<h2><span>5</span>Анализ и рефакторинг</h2>
+<p><div class="num">19</div>Проанализируйте написанный код. Какие места можно выделить в нём в отдельные функции?
+<p><div class="num">20</div>Проведите рефакторинг программы в соответствии с этими соображениями.
+
+<h1></h1>
+
+</body>
+</html>
